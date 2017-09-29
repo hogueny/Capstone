@@ -1,0 +1,33 @@
+// 검침량 테이블
+create table number( 
+dt_create datatime, // 날짜
+g_num int(4) // 검침량
+};
+
+
+// 온도 테이블
+create table temp( 
+dt_create datetime, //날짜
+temper char(5)  // 온도
+};
+
+
+// 회원 정보
+create table member{
+id varchar(20), // 아이디
+pw varchar(20), // 패스워드
+fee varchar(20), // 제한 요금
+email varchar(20), // 이메일
+};
+
+// 게시판
+create table board{
+b_no int(10) primary key auto_increment not null,
+b_title varchar(100) not null,
+b_content text not null,  
+b_date datetime not null,
+b_hit int(10) unsigned not null,
+b_id varchar(20) not null,
+b_password varchar(100) not null, 
+ip varchar(15)
+};     
