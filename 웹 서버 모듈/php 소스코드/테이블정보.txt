@@ -1,27 +1,27 @@
-// °ËÄ§·® Å×ÀÌºí
+// ê²€ì¹¨ëŸ‰ í…Œì´ë¸”
 create table number( 
-dt_create datatime, // ³¯Â¥
-g_num int(4) // °ËÄ§·®
+dt_create datatime, // ë‚ ì§œ
+g_num int(4) // ê²€ì¹¨ëŸ‰
 };
 
 
-// ¿Âµµ Å×ÀÌºí
+// ì˜¨ë„ í…Œì´ë¸”
 create table temp( 
-dt_create datetime, //³¯Â¥
-temper char(5)  // ¿Âµµ
+dt_create datetime, //ë‚ ì§œ
+temper char(5)  // ì˜¨ë„
 };
 
 
-// È¸¿ø Á¤º¸
-create table member{
-id varchar(20), // ¾ÆÀÌµğ
-pw varchar(20), // ÆĞ½º¿öµå
-fee varchar(20), // Á¦ÇÑ ¿ä±İ
-email varchar(20), // ÀÌ¸ŞÀÏ
-};
+// íšŒì› ì •ë³´
+create table member(
+id varchar(20), // ì•„ì´ë””
+pw varchar(20), // íŒ¨ìŠ¤ì›Œë“œ
+fee varchar(20), // ì œí•œ ìš”ê¸ˆ
+email varchar(20), // ì´ë©”ì¼
+);
 
-// °Ô½ÃÆÇ
-create table board{
+// ê²Œì‹œíŒ
+create table board(
 b_no int(10) primary key auto_increment not null,
 b_title varchar(100) not null,
 b_content text not null,  
@@ -30,4 +30,14 @@ b_hit int(10) unsigned not null,
 b_id varchar(20) not null,
 b_password varchar(100) not null, 
 ip varchar(15)
-};     
+);     
+
+// ëŒ“ê¸€
+create table comment(
+co_no int(10) primary key auto_increment not null,
+b_no int(10) not null,
+co_order int(10) not null,  
+co_content text not null,
+co_id varchar(20) not null,
+co_password varchar(100) not null
+);  
